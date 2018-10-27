@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.sql.Date;
+
 
 @Entity
 public class Usuari {
@@ -15,7 +15,7 @@ public class Usuari {
     private String  CodUsuari;
     private String  nom;
     private String  cognoms;
-    private Date    dataNaixement;
+    private String  dataNaixement;
     private String  email;
     private String  paisDeNaixement;
     private String  paisDeResidencia;
@@ -45,6 +45,14 @@ public class Usuari {
         this.nom = nom;
     }
 
+    public String getDataNaixement() {
+        return dataNaixement;
+    }
+
+    public void setDataNaixement(String dataNaixement) {
+        this.dataNaixement = dataNaixement;
+    }
+
     public String getCognoms() {
         return cognoms;
     }
@@ -53,13 +61,6 @@ public class Usuari {
         this.cognoms = cognoms;
     }
 
-    public Date getDataNaixement() {
-        return dataNaixement;
-    }
-
-    public void setDataNaixement(Date dataNaixement) {
-        this.dataNaixement = dataNaixement;
-    }
 
     public String getEmail() {
         return email;

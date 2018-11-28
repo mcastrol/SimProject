@@ -27,12 +27,8 @@ public interface UsuariRepository extends PagingAndSortingRepository<Usuari,Inte
 
     @Transactional(readOnly = false)
     @Modifying
-    @Query("delete from Usuari u where u.email = ?1")
+    @Query(value = "delete from Usuari u where u.email = ?1")
     void deleteByEmail(@Param("email")  String email);
-
-    @Query("SELECT u.nom, count(*) FROM  Usuari u group by u.nom")
-    List<Usuari> findStatDataNaixement();
-
 
 
 }

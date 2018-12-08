@@ -23,8 +23,6 @@ public interface UsuariRepository extends PagingAndSortingRepository<Usuari,Inte
 
     List<Usuari> findByEmail(@Param("email") String email);
 
-    List<Usuari> findByDataNaixement(@Param("dataNaixement") String dataNaixement);
-
     @Transactional(readOnly = false)
     @Modifying
     @Query(value = "delete from Usuari u where u.email = ?1")
